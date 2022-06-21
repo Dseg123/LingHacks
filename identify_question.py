@@ -21,7 +21,7 @@ def dialogue_act_features(post):
 
 ### return probdist given by Naive Bayes Classifier for post being a question ###
 def is_question_1(post):
-    c = (classifier.prob_classify(dialogue_act_features(s)))
+    c = (classifier.prob_classify(dialogue_act_features(post)))
     return [c.prob(True), c.prob(False)]
 
 ### use hard-coded interrogatives to check if it is an obvious question ###
@@ -62,12 +62,12 @@ def is_question(post):
 
 
 ### Testing code -- keep entering questions to see if model works ###
-while True:
-    s = input()
-    if s == "quit":
-        break
-    else:
-        print("the statement: '", s, "' is classified as: ", is_question(s))
+# while True:
+#     s = input()
+#     if s == "quit":
+#         break
+#     else:
+#         print("the statement: '", s, "' is classified as: ", is_question(s))
 
 
 ### Given a post, first check if it is at least 5 words and contains question mark ###
