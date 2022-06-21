@@ -1,11 +1,16 @@
 import determine_labels
 import identify_question
+import sys
 
-def response(post):
+if len(sys.argv) != 2:
+    print(None)
+else:
+    post = sys.argv[1]
     if identify_question.is_question(post):
         try:
-            return determine_labels.main(post)
+            print(determine_labels.main(post))
         except:
-            return None
-    return None
+            print(None)
+    else:
+        print(None)
 
