@@ -1,2 +1,2 @@
 # LingHacks
-Simple question identification and labelling project for TigerBot
+Simple question identification and labelling project for TigerBot. Submitted to LingHacks 2022.
